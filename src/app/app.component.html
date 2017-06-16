@@ -1,0 +1,22 @@
+<div>
+  <h1>
+    {{title}}
+  </h1>
+
+  <app-user-profile name="Marciano"
+                    lastname="Okomo"
+                    (selected)="onSelected($event)"
+                    >
+  </app-user-profile>
+    
+  <div *ngIf="userSelected != null" >
+    Usted ha elegido: 
+    {{ userSelected.nombre }}
+  </div>
+    
+  <div *ngIf="userSelected != null" >
+    Usted, su apellido es: 
+    {{ userSelected.apellido }}
+  </div>
+
+</div>
